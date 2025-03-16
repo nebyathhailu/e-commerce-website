@@ -8,30 +8,30 @@ body{
 #grid-container{
     display:grid;
     grid-template-areas: 
-    "item1 item1 item1 item1 item2 item2 "
-    "item3 item3 item3 item4 item4 item5 "
-    "item6 item6 item6 item6 item6 item6 "
-    "item7 item7 item7 item7 item7 item7 "
-    "item8 item8 item8 item8 item8 item8 "
-    "item9 item9 item9 item10 item10 item10 "
-    "item11 item11 item11 item12 item12 item12 "
-    "item13 item13 item13 item13 item13 item13 "
-    "item14 item14 item14 item14 item14 item14 "
-    "item15 item15 item15 item15 item15 item15 "
-    "item16 item16 item16 item17 item17 item17 "
-    "item18 item18 item18 item18 item18 item18 "
-    "item19 item19 item19 item19 item19 item19 ";
-    width:1440px;
-    margin: 100px;
+    "header header header header corner corner "
+    "home home home image image border "
+    "brand brand brand brand brand brand"
+    "product product product product product product"
+    "restyle restyle restyle restyle restyle restyle "
+    "picture picture picture trend trend trend "
+    "decor decor decor piece piece piece "
+    "offer offer offer offer offer offer "
+    "promo promo promo promo promo promo"
+    "review review review review review review"
+    "photo photo photo testimony testimony testimony "
+    "footer footer footer footer footer footer "
+    "copyright copyright copyright copyright copyright copyright ";
+    width: 1440px;
+    margin: auto;
     background-color: white;
     grid-template-columns: (6, 1fr);
 }
-.item1{
-    grid-area: item1;
+.header{
+    grid-area: header;
 }
 
-.item2{
-    grid-area: item2;
+.corner{
+    grid-area: corner;
     height: 200px;
     background-color: rgb(55, 55, 55);
     text-align: right;
@@ -40,45 +40,51 @@ body{
     border-top-left-radius: 200px;
     border-bottom-left-radius: 150px 50%;
 }
-.item3 {
-    grid-area: item3;
+.corner > img {
+    width:20px;
+    height: 20px;
+    margin:15px;
+}
+.home {
+    grid-area: home;
     margin-left: 100px;
 }
-.item3 h1{
-    font-size: 50px;
+.home h1{
+    font-size: 60px;
+    margin-top: 30px;
 }
-.item3 h2{
+.home h2{
     font-size: 35px;
     font-weight: 550;     
 }
-.item3 .sub-item{
+.home .archive{
     display:grid ;
     grid-template-columns: auto auto auto;
     margin-left: 25px;
 } 
-.item3 .sub-item p{
+.home .archive p{
     margin-left:0px ;
     margin-top: 5px;
 }
-.item3 #wv {
+.home #watch {
     display: inline;
     margin-left:5px ;
 }
-.item3 button {
+.home button {
     background-color: rgb(55, 55, 55);
     font-weight: bold;
     color: white;
     border: none;
 }
-.item3 span{
+.home span{
     border: dashed 2px grey; 
     padding: 3px;
 }
-.item4{
-    grid-area: item4;
+.image{
+    grid-area:image;
 }
-.item5{
-    grid-area: item5;
+.border{
+    grid-area: border;
     height: 200px;
     background-color: rgb(55, 55, 55);
     clip-path:polygon(
@@ -90,157 +96,162 @@ body{
         0 100%
       )
 }
-.item6{
-    grid-area: item6;
+.brand{
+    grid-area: brand;
 }
-.item6 h1 {
+.brand h1 {
     display:inline;
-    margin: 50px;
+    margin: 45px;
     font-size: 40px;
     color:grey;
     font-weight: lighter;
 }
 #ikea{
+    padding-left:50px ;
     font-family:fantasy;
     font-weight: 1000;
     text-shadow: 30px;
 }
-.item7{
-    grid-area: item7;
+.product{
+    grid-area: product;
     display: grid;
     grid-template-rows: auto auto;
 }
-.item7 .para{
+.product .paragraph{
     margin-bottom: 50px;
 }
-.item7 .para #p1{
+.product .paragraph #text{
     display: inline-flex;
     margin-left: 50px;
 }
-.item7 .para #p2{
+.product .paragraph #image{
     display: inline-flex;
     margin-left: 1000px;
 }
-.item7 .sub-item {
+.product .main {
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.item7 .sub-item p{
+.product .main p{
     margin:3px;
 }
-.item7 .new{
+.product .new{
     color:red;
 }
 
-.item7 .sub-item .sub-sub-item img{
+.product .main .vase img{
       height: 300px;
       width: 300px;
 }
-.item7 .span{
+.product .span{
     margin-left:200px;
     color: black;
 }
-.item8{
-    grid-area: item8;
+.restyle{
+    grid-area: restyle;
     text-align: center;
     margin: 50px;
 }
-.item9{
-    grid-area: item9;
+.picture{
+    grid-area: picture;
     margin-left: 100px;
 }
-.item10{
-    grid-area: item10;
+.trend{
+    grid-area: trend;
+    margin-bottom: 100px;
 }
-.item10 h1{
+.trend h1{
     font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.item10 button{
+.trend button{
     background-color: white;
 
 }
-.item11{
-    grid-area: item11;
+.decor{
+    grid-area: decor;
     margin-left: 100px;
 }
-.item11 h1{
+.decor h1{
     font-size: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-.item11 button{
+.decor button{
     background-color: white;
 
 }
-.item12{
-    grid-area: item12;
+.piece{
+    grid-area: piece;
 }
-.item13{
-    grid-area: item13;
+.offer{
+    grid-area: offer;
     text-align: center;
 }
-.item14{
-    grid-area: item14;
+.promo{
+    grid-area: promo;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.item14 .sub-item{
+.promo .main{
     margin:60px;
     text-align: center;
 }
-.item14 .sub-item h3{
+.promo .main h3{
     margin-top: 50px;
 }
-.item14 .sub-item p{
+.promo .main p{
     margin-top: 20px;
 }
 
-.item15{
-    grid-area: item15;
+.review{
+    grid-area: review;
     text-align: center;
     margin: 50px;
 }
-.item16{
-    grid-area: item16;
+.photo{
+    grid-area: photo;
     margin-left: 100px;
 }
-
-.item17{
-    grid-area: item17;
+.testimony{
+    grid-area: testimony;
 }
-.item17 #ap{
+.testimony #arthur{
     display: inline-flex;
     margin-top:0px ;
     margin-bottom: 50px;
 }
-.item17 span{
+.testimony span{
     margin-left: 350px;
     font-size: 50px;
 }
-.item18{
-    grid-area: item18;
+.footer{
+    grid-area: footer;
     display: grid;
     grid-template-columns: auto auto auto auto;
 }
-.item18 .sub-item{
+.footer .main{
     margin: 50px;
 }
-.item18 p{
+.footer p{
     margin-left:50px;
     margin-bottom: 40px;
 
 }
-.item18 li{
+.footer li{
     padding: 12px;
 }
-.item18  ul{
+.footer  ul{
     list-style-type: none;
 }
-.item19{
-    grid-area: item19;
+.copyright{
+    grid-area: copyright;
 }
-.item19 span{
+.copyright span{
     margin-left: 800px;
 }
-.item19 p{
+.copyright p{
     margin-left: 90px;
 }
 .nav a {
@@ -257,22 +268,15 @@ body{
 .nav li {
     display:inline;    
 }
-
-.item2 > img {
-    width:20px;
-    height: 20px;
-    margin:15px;
-}
-
 a {
     text-decoration: none;
     color:black;
 }
 .main_image {
     height: 500px;
-    width: 400px;
+    width: 500px;
 }
-.item {
+.grid-item {
     padding:50px;
 }
 button{
@@ -285,3 +289,5 @@ button{
 p{
     font-size: 18px;
 }
+
+
